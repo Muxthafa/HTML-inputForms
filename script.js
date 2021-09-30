@@ -18,6 +18,16 @@ email.addEventListener("input",function(){
         emailError.textContent="email is incorrect"
 })
 
+const number = document.querySelector("#number")
+const noError = document.querySelector(".no-error")
+number.addEventListener("input",function(){
+    let noRegex = RegExp("^([0-9]{0,3}?)[  ]?([234789]{1})([0-9]{9})$")
+    if(noRegex.test(number.value))
+        noError.textContent="";
+    else
+        noError.textContent="number is incorrect"
+})
+
 const salary = document.querySelector("#salary")
 const output = document.querySelector(".salary-output")
 output.textContent = salary.value
