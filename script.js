@@ -8,6 +8,16 @@ text.addEventListener("input",function(){
         textError.textContent="Name is incorrect"
 })
 
+const email = document.querySelector("#email")
+const emailError = document.querySelector(".email-error")
+email.addEventListener("input",function(){
+    let emailRegex = RegExp("^w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+([\.-]?\w+)*$")
+    if(emailRegex.test(email.value))
+        emailError.textContent="";
+    else
+        emailError.textContent="email is incorrect"
+})
+
 const salary = document.querySelector("#salary")
 const output = document.querySelector(".salary-output")
 output.textContent = salary.value
