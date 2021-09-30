@@ -7,6 +7,9 @@ body{
     margin: 0px auto;
     padding: 2em;
 }
+input{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 header {
     display: flex;
     flex-flow: column wrap;

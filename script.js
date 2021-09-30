@@ -28,6 +28,17 @@ number.addEventListener("input",function(){
         noError.textContent="number is incorrect"
 })
 
+
+const pwd = document.querySelector("#pwd")
+const pwdError = document.querySelector(".pwd-error")
+pwd.addEventListener("input",function(){
+    let pwdRegex = RegExp("^(?=.*[0-9])(?=.*[A-Z])(?=.*[@#$%^&+=]).{8,}$")
+    if(pwdRegex.test(pwd.value))
+        pwdError.textContent="";
+    else
+        pwdError.textContent="password is incorrect"
+})
+
 const salary = document.querySelector("#salary")
 const output = document.querySelector(".salary-output")
 output.textContent = salary.value
